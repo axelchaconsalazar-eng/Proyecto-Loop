@@ -64,14 +64,13 @@ if (listaPublicaciones) {
 }
 
 
-// ---------- 3. FUNCIONES AYUDANTES ----------
-// Crea un párrafo así: <p><strong>Etiqueta</strong> texto</p>
-//function crearParrafo(etiqueta, texto) {
-  //const parrafo = document.createElement("p");
-  //parrafo.innerHTML = "<strong>" + etiqueta + "</strong> ";
-  //parrafo.append(texto);
-  //return parrafo;
-//} //
+// Funciones de ayuda
+function crearParrafo(etiqueta, texto) {
+  const parrafo = document.createElement("p");
+  parrafo.innerHTML = "<strong>" + etiqueta + "</strong> ";
+  parrafo.append(texto);
+  return parrafo;
+} 
 
 // Crea una publicación completa con los datos recibidos
 function crearArticulo(post) {
