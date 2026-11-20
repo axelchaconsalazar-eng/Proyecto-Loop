@@ -278,3 +278,7 @@ footer p:last-child {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+/* Mensajes de error */
+#mensaje { min-height: 1.5em; font-weight: 600; }
+#mensaje.error { color: #B3401A; }
+#mensaje.ok { color: #2F6B4F; }
