@@ -234,7 +234,7 @@ textarea { resize: vertical; }
 input[type="checkbox"] { width: auto; accent-color: var(--mandarina); }
 label[for="recordar"] { font-weight: 400; margin-left: .3rem; }
 
-/* ---------- 11. PIE DE PÁGINA ---------- */
+/* Footer */
 footer {
   background: var(--lila);
   margin-top: 3rem;
@@ -242,24 +242,31 @@ footer {
   text-align: center;
   border-radius: 32px 32px 0 0;
 }
-footer h3 { margin: 1rem 0 .3rem; }
-footer ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.2rem; list-style: none; }
-footer a:hover { background: var(--vainilla); }
-footer p:last-child { margin-top: 1.5rem; font-size: .85rem; color: var(--texto-suave); }
+footer h3 { 
+    margin: 1rem 0 .3rem; 
+}
+footer ul { 
+    display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.2rem; list-style: none; 
+}
+footer a:hover {
+     background: var(--vainilla); 
+    }
+footer p:last-child {
+     margin-top: 1.5rem; font-size: .85rem; color: var(--texto-suave); 
+    }
 
-/* ---------- 12. ANIMACIONES (@keyframes) ---------- */
-/* Aparecer: empieza invisible y 24px más abajo, y sube hasta su lugar */
+/* Animaciones con keyframes */
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-/* Flotar: sube 10px y vuelve a bajar, en bucle */
+/* Flotar */
 @keyframes flotar {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
 }
 
-/* ---------- 13. PANTALLAS PEQUEÑAS (celular) ---------- */
+/* Pantallas de celular */
 @media (max-width: 640px) {
   header { justify-content: center; text-align: center; }
   nav ul { justify-content: center; }
@@ -267,9 +274,11 @@ footer p:last-child { margin-top: 1.5rem; font-size: .85rem; color: var(--texto-
   form { padding: 1.4rem; }
 }
 
-/* ---------- 14. ACCESIBILIDAD ----------
-   Si la persona tiene activada la opción "reducir movimiento"
-   en su dispositivo, se apagan las animaciones. */
+/* apagar las animaciones si la persona lo tiene activado */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+/* Mensajes de error */
+#mensaje { min-height: 1.5em; font-weight: 600; }
+#mensaje.error { color: #B3401A; }
+#mensaje.ok { color: #2F6B4F; }
